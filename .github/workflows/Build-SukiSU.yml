@@ -4,7 +4,7 @@ on:
     inputs:
       CPU:
         type: choice
-        description: "分支"
+        description: "Branch / Ветка"
         required: true
         default: sm8550
         options:
@@ -18,7 +18,7 @@ on:
           - sm8850
       FEIL:
         type: choice
-        description: "配置文件"
+        description: "Configuration File (GitHub bug may not show last item, do not use this by mistake) / Файл конфигурации (Ошибка GitHub может не показывать последний пункт, не используйте этот по ошибке)"
         required: true
         default: oneplus_ace2_pro_v
         options:
@@ -46,10 +46,10 @@ on:
           - oneplus_pad_2_pro
           - oneplus_pad_3
           - oneplus_15
-          - GitHub有bug可能不显示最后一项,误使用此项
+          - GitHub bug may not show last item / Ошибка GitHub может не показывать последний пункт
       CPUD:
         type: choice
-        description: "处理器代号"
+        description: "Processor Codename / Кодовое имя процессора"
         required: true
         default: kalama
         options:
@@ -61,7 +61,7 @@ on:
           - canoe
       ANDROID_VERSION:
         type: choice
-        description: "内核安卓版本"
+        description: "Kernel Android Version / Версия Android для ядра"
         required: true
         default: android15
         options:
@@ -71,19 +71,19 @@ on:
           - android15
           - android16
       KERNEL_VERSION:
-       type: choice
-       description: "内核版本"
-       required: true
-       default: "5.15"
-       options:
-         - "5.10"
-         - "5.15"
-         - "6.1"
-         - "6.6"
-         - "6.12"
+        type: choice
+        description: "Kernel Version / Версия ядра"
+        required: true
+        default: "5.15"
+        options:
+          - "5.10"
+          - "5.15"
+          - "6.1"
+          - "6.6"
+          - "6.12"
       BUILD_METHOD:
         type: choice
-        description: "编译方式"
+        description: "Build Method / Способ сборки"
         required: true
         default: gki
         options:
@@ -91,22 +91,22 @@ on:
           - perf
       SUSFS_CI:
         type: boolean
-        description: "下载SUSFS模块是否使用CI构建？"
+        description: "Use CI build for SUSFS module download? / Использовать CI сборку для загрузки модуля SUSFS?"
         required: true
         default: true
       VFS:
         type: boolean
-        description: "是否启用手动钩子？"
+        description: "Enable manual hooks? / Включить ручные хуки?"
         required: true
         default: true
       KPM:
         type: boolean
-        description: "是否启用KPM？"
+        description: "Enable KPM? / Включить KPM?"
         required: true
         default: true
       ZRAM:
         type: boolean
-        description: "是否启用添加更多的ZRAM算法？"
+        description: "Add more ZRAM algorithms? / Добавить больше алгоритмов ZRAM?"
         required: true
         default: false
 
